@@ -106,6 +106,7 @@ var ViewModel = function() {
     }, self);
 
     // add marker is the function that adds all the default locations to the map as a marker
+    // basically this function is the same as what was shown in udacity google maps apis course starter code (first couple of exercises)
     self.addMarkers = function() {
         // bounds object will ensure that the map starts off with all the markers (after adding them) visible
         var bounds = new google.maps.LatLngBounds();
