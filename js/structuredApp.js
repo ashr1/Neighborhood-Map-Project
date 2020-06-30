@@ -166,7 +166,7 @@ var ViewModel = function() {
                 query: self.currentMarker.getTitle(),
                 limit: 3,
                 client_id: 'GZSDRG4YISSETPUX0LER4DOG5B1T4ELKJIP2NVNQJH4HMSAP',
-                client_secret: 'IWZY0TJGAIKXKMGXZSPVFTNEZRV5RSIYBMI0EIH3J0K2GIWK',
+                client_secret: 'SUECGZRMC5JU2F1LYJD1RYIYQBQ1RM1P0ZG0IEVE5CKBK4JA',
                 v: '20170307'
             },
             success: function(responseData) {
@@ -256,4 +256,5 @@ var googleFailed = function() {
 // toggle the class for the nav side bar...this function is here, not dealt with ko, because it isn't directly data related
 var openSidebar = function() {
     $(".list-panel").toggleClass("open-list-panel");
+    $(".hamburger").toggleClass("hamburger-opened");
 };

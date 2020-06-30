@@ -12,16 +12,18 @@
 <body>
     <div class="container">
         <header>
-            <i class="fa fa-bars" aria-hidden="true" data-bind="click: openSidebar"></i>
-            <span class="app-title">Gym Locations around Santa Clara</span>
+            <span class="hamburger-container"><i class="fa fa-bars fa-3x hamburger" aria-hidden="true" data-bind="click: openSidebar"></i></span>
+            <div class="app-title-container"><span class="app-title">Gym Locations around Santa Clara</span></div>
+            
         </header>
-
         <div class="list-panel">
-            <br>
-            <input class="search-places" type="text" placeholder="Enter a location to filter result" data-bind="textInput: queryValue">
-            <hr>
+            <!-- <br> -->
+            <div class="search-places-container">
+                <input class="search-places" type="text" placeholder="Enter a location to filter result" data-bind="textInput: queryValue">
+            </div>
+            <hr class="list-panel-divider">
             <ul class="place-list" data-bind="foreach: onDemandLocations">
-                <li class="location" data-bind="text: getTitle(), click: $parent.openInfoBox"></li>
+                <li class="location"><span data-bind="text: getTitle(), click: $parent.openInfoBox"></span></li>
             </ul>
         </div>
         <div id="map-container">
@@ -32,7 +34,7 @@
     <script async src="js/lib/jquery-3.1.1.js"></script>
     <script src="js/structuredApp.js"></script>
 
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkRibIneVVpb2lxSFkz-OSVj4Aso1-eW4&callback=initMap" onerror="googleFailed()">
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChp30fXkpF6YLLfAp0iESzUwWCBxOxpbo&callback=initMap" onerror="googleFailed()">
     </script>
 
 </body>
